@@ -1,0 +1,37 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "suppressImplicitAnyIndexErrors": true,
+    "sourceMap": true,
+    "sourceRoot": "src/app",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noImplicitAny": true,
+    "noUnusedParameters": true,
+    "stripInternal": true,
+    "removeComments": true,
+    "baseUrl": ".",
+    "paths": {
+      "app": [
+        "app"
+      ],
+      "appDir/*": [
+        "app/*"
+      ]
+    },
+    "lib": [
+      "es2016",
+      "dom"
+    ],
+    "typeRoots": [
+      "../node_modules/@types"
+    ]
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}

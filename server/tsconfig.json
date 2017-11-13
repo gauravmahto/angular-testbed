@@ -1,0 +1,46 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "target": "es6",
+    "sourceMap": true,
+    "sourceRoot": "server",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "strict": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "stripInternal": true,
+    "removeComments": true,
+    "noEmitOnError": false,
+    "outDir": "../dist/server",
+    "baseUrl": ".",
+    "paths": {
+      "*": [
+        "node_modules/*"
+      ],
+      "app": [
+        "app"
+      ],
+      "app/*": [
+        "app/*"
+      ]
+    },
+    "lib": [
+      "es2016",
+      "dom"
+    ],
+    "pretty": true
+  },
+  "files": [
+    "global.d.ts"
+  ],
+  "include": [
+    "**/*"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
