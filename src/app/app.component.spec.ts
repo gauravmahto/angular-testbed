@@ -1,3 +1,7 @@
+/**
+ * Copyright 2017 - Author gauravm.git@gmail.com
+ */
+
 import { TestBed } from '@angular/core/testing';
 
 import { AppComponent } from './app.component';
@@ -8,7 +12,7 @@ describe('App', () => {
  });
 
  it ('should work', () => {
-   let fixture = TestBed.createComponent(AppComponent);
+   const fixture = TestBed.createComponent(AppComponent);
    expect(fixture.componentInstance instanceof AppComponent).toBe(true, 'should create AppComponent');
  });
 });

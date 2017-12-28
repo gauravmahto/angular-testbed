@@ -1,8 +1,12 @@
-var webpack = require('webpack');
-var helpers = require('./helpers');
+/**
+ * Copyright 2017 - Author gauravm.git@gmail.com
+ */
+
+const webpack = require('webpack');
+const helpers = require('./helpers');
 
 module.exports = {
-  
+
   devtool: 'inline-source-map',
 
   resolve: {
@@ -17,7 +21,7 @@ module.exports = {
           {
             loader: 'awesome-typescript-loader',
             options: { configFileName: helpers.root('src', 'tsconfig.json') }
-          } , 'angular2-template-loader'
+          }, 'angular2-template-loader'
         ]
       },
       {

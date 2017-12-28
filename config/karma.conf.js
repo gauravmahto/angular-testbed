@@ -1,15 +1,20 @@
-var webpackConfig = require('./webpack.test');
+/**
+ * Copyright 2017 - Author gauravm.git@gmail.com
+ */
 
-module.exports = function (config) {
-  
-  var _config = {
+const webpackConfig = require('./webpack.test');
+
+module.exports = (config) => {
+
+  const config$ = {
     basePath: '',
 
     frameworks: ['jasmine'],
 
-    files: [
-      {pattern: './config/karma-test-shim.js', watched: false}
-    ],
+    files: [{
+      pattern: './config/karma-test-shim.js',
+      watched: false
+    }],
 
     preprocessors: {
       './config/karma-test-shim.js': ['webpack', 'sourcemap']
@@ -34,6 +39,6 @@ module.exports = function (config) {
     singleRun: true
   };
 
-  config.set(_config);
+  config.set(config$);
 
 };

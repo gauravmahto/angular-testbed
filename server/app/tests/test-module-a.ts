@@ -1,21 +1,16 @@
+/**
+ * Copyright 2017 - Author gauravm.git@gmail.com
+ */
+
 import { Observable } from 'rxjs/Rx';
-import { setTimeout, setInterval, clearInterval } from 'timers';
+import { clearInterval, setInterval, setTimeout } from 'timers';
+
+const log = console.log;
 
 export class TestA {
 
   // private pendingRequest: Observable<string> | undefined;
   private requestCount = 0;
-
-  private getPromise(val: string): Promise<string> {
-
-    return new Promise((res) => {
-
-      console.log('Made request...', this.requestCount++);
-      setTimeout(res, 1000, val);
-
-    });
-
-  }
 
   public getObservable(): Observable<any> {
 
@@ -23,11 +18,11 @@ export class TestA {
 
       // code:1
       const interval = setInterval(() => {
-        if (this.requestCount > 2) {          
+        if (this.requestCount > 2) {
           return observer.complete();
         }
 
-        // if (this.requestCount === 2) {          
+        // if (this.requestCount === 2) {
         //   return observer.error('Causing error!');
         // }
 
@@ -37,8 +32,19 @@ export class TestA {
 
       return () => {
         clearInterval(interval); // un-comment if code:1 is un-commented
-        console.log('Destroy called....');
+        log('Destroy called....');
       };
+
+    });
+
+  }
+
+  private getPromise(val: string): Promise<string> {
+
+    return new Promise((res) => {
+
+      log('Made request...', this.requestCount++);
+      setTimeout(res, 1000, val);
 
     });
 

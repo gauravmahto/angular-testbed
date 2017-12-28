@@ -1,7 +1,11 @@
-var webpack = require('webpack');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var helpers = require('./helpers');
+/**
+ * Copyright 2017 - Author gauravm.git@gmail.com
+ */
+
+const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const helpers = require('./helpers');
 
 module.exports = {
 
@@ -57,7 +61,7 @@ module.exports = {
         }]
       },
 
-      /** 
+      /**
        * This pattern is for the application-wide styles. 
        * It excludes .css and .scss files within the src/app directory where the component-scoped styles sit. 
        * The ExtractTextPlugin (described below) applies the style and css loaders to these files.
